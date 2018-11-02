@@ -15,6 +15,7 @@ function fakultet(nummer){
 if (nummer === "0") {
         return inMat + "! = " + 1;
 }
+
  else {
      
  
@@ -23,8 +24,13 @@ for (let index = nummer - 1; index >= 1; index--) {
     
 }
     }
-return inMat + "! = " + nummer;
-
+let svar = inMat + "! = " + nummer;
+if (nummer == Infinity) {
+return "Svaret är för högt för att kunna beräknas!";  
+}
+else{
+return svar;
+}
 }
 
 document.getElementById("svar").innerHTML = fakultet(inMat);
